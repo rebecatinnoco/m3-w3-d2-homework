@@ -1,0 +1,52 @@
+@import "colors.scss";
+
+//Global
+* {
+    font-size: 1.2rem;
+}
+@mixin important {
+    p{
+        margin: 50px;
+        padding-top: 200px;
+      }
+}
+.container {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+
+    .left {
+        height: 100%;
+        width: 69%;
+        position: relative;
+        @include important;
+    }
+
+    .right {
+        height: 100%;
+        position: relative;
+        width: 29%;
+        @include important;
+
+        .button {
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 7em;
+            height: 2.5em;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5em 2em;
+
+            //this is to center content vertically
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+        }
+    }
+
+}
